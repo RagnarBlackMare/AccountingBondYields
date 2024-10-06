@@ -1,0 +1,37 @@
+﻿<Window x:Class="AccountingBondYields.BondListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountingBondYields"
+        mc:Ignorable="d"
+        Title="BondListView" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name ="BondListGrid" AutoGenerateColumns="False">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="Название компании" Width="175" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn  Header="Id облигации" Width="175" Binding="{Binding bondOrdinaryList.BondId}"/>
+                <DataGridTextColumn  Header="Рейтинг облишации" Width="175" Binding="{Binding BondRaiting}"/>
+                <DataGridTextColumn  Header="Номинальная стоимость облигации" Width="175" Binding="{Binding BondNominalValue}"/>
+                <DataGridTextColumn  Header="Количество облигаций" Width="175" Binding="{Binding BondQuantity}"/>
+                <DataGridTextColumn  Header="Текущаяя стоимость" Width="175" Binding="{Binding BondCurrentCost}"/>
+                <DataGridTextColumn  Header="Средняя цена покупки" Width="175" Binding="{Binding AverageBondPourchasePrice}"/>
+                <DataGridTextColumn  Header="Дата погашения" Width="175" Binding="{Binding BondPayOffDate}"/>
+                <DataGridTextColumn  Header="Дата оферты" Width="175" Binding="{Binding BondOfferDate}"/>
+                <DataGridTextColumn  Header="месяцев до погашения" Width="175" Binding="{Binding NumberMothsToPayOff}"/>
+                <DataGridTextColumn  Header="месяцев до оферты" Width="175" Binding="{Binding NumberMonthsToOffer}"/>
+                <DataGridTextColumn  Header="Значение купона" Width="175" Binding="{Binding CouponValue}"/>
+                <DataGridTextColumn  Header="Количество купонов в год" Width="175" Binding="{Binding NumberOfCouponPerYear}"/>
+                <DataGridTextColumn  Header="Годовая доходность КУПОНА в процентах %" Width="175" Binding="{Binding BondIncomeForCouponPeriodPercent}"/>
+                <DataGridTextColumn  Header="Доходность облигации в год в %" Width="175" Binding="{Binding BondIncomePerYearPercent}"/>
+                <DataGridTextColumn  Header="Доходность к погашения в %" Width="175" Binding="{Binding IncomeBondMaturityPercent}"/>
+                <DataGridTextColumn  Header="Купонов выплачено мне р." Width="175" Binding="{Binding CouponsPaidToMe}"/>
+                <DataGridTextColumn  Header="Желаемый % дохода" Width="175" Binding="{Binding DesiredPercentYieldPerYear}"/>
+                <DataGridTextColumn  Header="Стоимость облигации для желаемого % дохода" Width="175" Binding="{Binding BondCostToDesiredPercentYieldPerYear}"/>
+                <DataGridTextColumn  Header="Доход от разницы в номинале" Width="175" Binding="{Binding IncomeFromDifferenceNominalAndAveragePourchaseCost}"/>                
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
